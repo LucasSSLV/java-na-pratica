@@ -1,16 +1,28 @@
+package org.example;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Veiculo {
-    String placa;
-    int anoFabricacao;
-    String combiustivel;
-    List<String> abastecimentos;
+    private String placa;
+    private int anoFabricacao;
+    private String combiustivel;
+    private List<String> abastecimentos;
 
-    public Veiculo(String placa, int anoFabricacao, String combiustivel, List<String> abastecimentos) {
+
+    public Veiculo(String placa, int anoFabricacao, String combiustivel) {
         this.placa = placa;
         this.anoFabricacao = anoFabricacao;
         this.combiustivel = combiustivel;
-        this.abastecimentos = abastecimentos;
+    }
+
+    public void Abastecer() {
+        this.abastecimentos = new ArrayList<>();
+    }
+
+    public void AdicionaAbastecimento(String local, String motorista, double valor) {
+        String abastecimento = "Local: " + local + ", Motorista: " + motorista + ", Valor: " + valor;
+        abastecimentos.add(abastecimento);
     }
 
     public String getPlaca() {

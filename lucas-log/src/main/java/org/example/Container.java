@@ -1,3 +1,5 @@
+package org.example;
+
 public class Container implements Transportador {
     String modelo;
     double capacidade;
