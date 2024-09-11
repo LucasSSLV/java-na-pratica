@@ -5,6 +5,10 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("iniciando");
+    Carro carro01 = new Carro("ANA0P23", 2018, "gasolina");
+
+    carro01.adicionaAbastecimento("posto1", "cleiton", 158.68);
+    carro01.getAbastecimentos();
+    carro01.getFullInfos();
     }
 }
